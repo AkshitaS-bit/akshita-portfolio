@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Akshita Sanu — Webmaster Apprentice Portfolio</title>
+  <meta name="description" content="Portfolio and resume of a high-school freshman applying for Webmaster Apprentice (FBLA)." />
+  <style>
+    :root{
+      --bg:#fbfbfc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0f766e;
+      --accent-2:#0ea5a4;
+      --glass: rgba(255,255,255,0.6);
+      --shadow: 0 6px 18px rgba(15,23,42,0.08);
+      --maxw:1000px;
+      --radius:12px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#f8fafc, #fbfbfd);color:#0f172a}
+    .wrap{max-width:var(--maxw);margin:32px auto;padding:20px}
+    header{
+      display:flex;align-items:center;gap:20px;padding:18px;border-radius:var(--radius);background:linear-gradient(90deg,var(--card),#f8fffd);box-shadow:var(--shadow)
+    }
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:28px}
+    .title{flex:1}
+    .title h1{margin:0;font-size:22px;letter-spacing:0.2px}
+    .title p{margin:4px 0 0;color:var(--muted)}
+    .contact{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--accent);color:white;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600;border:0;cursor:pointer}
+    .btn-ghost{background:transparent;border:1px solid #e6eef0;color:var(--accent);padding:8px 12px;border-radius:8px}
+
+    main{display:grid;grid-template-columns:320px 1fr;gap:18px;margin-top:18px}
+
+    aside{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+    section.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+    h2{margin:0 0 12px 0;font-size:16px}
+    ul{padding-left:18px;margin:0}
+    li{margin:6px 0;color:#111827}
+    .muted{color:var(--muted);font-size:14px}
+    .chip{display:inline-block;padding:6px 8px;border-radius:999px;background:#f1f5f9;margin:6px 6px 0 0;font-size:13px}
+
+    .skills{display:flex;flex-wrap:wrap}
+    .experience p{margin:6px 0}
+    .line{height:1px;background:#eef2f7;margin:12px 0;border-radius:2px}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      main{grid-template-columns:1fr;}
+      .avatar{width:72px;height:72px}
+    }
+
+    /* Print */
+    @media print{
+      body{background:white}
+      header, footer{box-shadow:none}
+      main{grid-template-columns:1fr}
+      .btn, .btn-ghost{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar" aria-hidden="true">Y</div>
+      <div class="title">
+        <h1>Akshita Sanu</h1>
+        <p>Webmaster Apprentice • FBLA Candidate • Freshman, Class of 2029</p>
+        <div class="muted">Tampa, FL • <span id="email-display">akshita.sanu1@gmail.com</span>813-485-3034</div>
+      </div>
+      <div class="contact">
+        <button class="btn" id="printBtn" title="Download / Print resume">Print / Save as PDF</button>
+        <button class="btn-ghost" id="copyBtn" title="Copy email address">Copy email</button>
+      </div>
+    </header>
+
+    <main>
+      <aside>
+        <section aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Skills</h2>
+          <div class="skills">
+            <span class="chip">Scratch</span>
+            <span class="chip">Code.org</span>
+            <span class="chip">Khan Academy</span>
+            <span class="chip">Python (beginner)</span>
+            <span class="chip">HTML &amp; CSS</span>
+            <span class="chip">JavaScript (basics)</span>
+            <span class="chip">Microsoft Office</span>
+            <span class="chip">Time Management</span>
+            <span class="chip">Teamwork</span>
+          </div>
+        </section>
+
+        <div class="line"></div>
+
+        <section aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+          <p><strong>Middleton High School — CSIT Magnet</strong><br><span class="muted">Freshman, Class of 2029</span></p>
+          <p style="margin-top:10px"><strong>Benito Middle School</strong><br><span class="muted">Consistent Principal’s Honor Roll (Straight-A academic record)</span></p>
+        </section>
+
+        <div class="line"></div>
+
+        <section aria-labelledby="contact-heading">
+          <h2 id="contact-heading">Contact</h2>
+          <p class="muted">Email</p>
+          <p><a href="mailto:your.email@example.com" id="mailto">akshita.sanu1@gmail.com</a></p>
+          <p class="muted" style="margin-top:8px">Portfolio</p>
+          <p><a href="#">[Your GitHub or Project Link]</a></p>
+        </section>
+      </aside>
+
+      <div>
+        <section class="card" id="profile">
+          <h2>Profile</h2>
+          <p>Motivated freshman with a consistent straight-A record and a strong foundation in coding (Scratch, Code.org, Python, HTML, CSS, JavaScript). Eager to support FBLA by keeping the chapter website accurate, accessible, and student-friendly. Excited to combine technical skills with creativity and teamwork.</p>
+        </section>
+
+        <section class="card experience" id="experience" style="margin-top:14px">
+          <h2>Experience &amp; Activities</h2>
+          <ul>
+            <li><strong>FBLA — Computer Science Objective Test:</strong> Selected for State Leadership Conference.</li>
+            <li><strong>Perennial Math Competition:</strong> District 1<sup>st</sup> Place.</li>
+            <li><strong>Science Recognition:</strong> Awarded Outstanding Student for Science in middle school.</li>
+            <li><strong>National Junior Honor Society (NJHS):</strong> Completed 75+ volunteer service hours.</li>
+            <li><strong>Peer Tutoring:</strong> After-school math tutor at Benito Middle School.</li>
+            <li><strong>Community Service:</strong> Coordinated two service projects supporting local charities.</li>
+            <li><strong>Coding Projects:</strong> Created 30+ interactive projects on Scratch; built small practice projects on Code.org and Khan Academy.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="projects" style="margin-top:14px">
+          <h2>Project Highlights</h2>
+          <p class="muted">(Short, tangible examples are great to show at interviews.)</p>
+          <ul>
+            <li><strong>Interactive Scratch Story:</strong> Multi-stage project teaching basic coding concepts to younger students.</li>
+            <li><strong>Club Updates System (example):</strong> Simple page layout and calendar that can be updated weekly to show upcoming FBLA events and meeting notes.</li>
+          </ul>
+          <p class="muted">Tip: Add screenshots or links to each project so reviewers can click through.</p>
+        </section>
+
+        <section class="card" id="achievements" style="margin-top:14px">
+          <h2>Achievements</h2>
+          <ul>
+            <li>Maintained straight-A grades throughout elementary and middle school.</li>
+            <li>District 1st place (Perennial Math competition).</li>
+            <li>Recognized for outstanding achievement in science.</li>
+          </ul>
+        </section>
+
+      </div>
+    </main>
+
+    <footer>
+      <div>Ready to help run and maintain your chapter's website — technical skills + reliability.</div>
+      <div style="margin-top:8px">Made with HTML, CSS &amp; JavaScript • Replace placeholders with your details before publishing.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Small interactivity: print and copy email
+    document.getElementById('printBtn').addEventListener('click', function(){
+      window.print();
+    });
+
+    document.getElementById('copyBtn').addEventListener('click', async function(){
+      const email = document.getElementById('email-display').textContent.trim();
+      try{
+        await navigator.clipboard.writeText(email);
+        alert('Email copied: ' + email);
+      }catch(e){
+        // fallback
+        const a = document.createElement('textarea'); a.value = email; document.body.appendChild(a); a.select(); document.execCommand('copy'); document.body.removeChild(a);
+        alert('Email copied to clipboard');
+      }
+    });
+
+    // OPTIONAL: smooth scrolling for hashes
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const href = this.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          const el = document.querySelector(href);
+          if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
